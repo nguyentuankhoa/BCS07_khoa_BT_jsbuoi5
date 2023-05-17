@@ -108,3 +108,30 @@ function tinhTienThue() {
   document.getElementById("ketQuaBai3").innerHTML =
     "họ tên: " + " Tiền thu nhập cá nhân: " + thueThuNhapFormatted + "triệu";
 }
+
+
+// bài tập 4: tính tiền cáp 
+function tinhTienCapQuang() {
+  var maKh = document.getElementById("maKH").value;
+  var soKenh = document.getElementById("soKenh").value * 1;
+  var chonKH = document.getElementById("chonKhach").value;
+  var soKetNoi = document.getElementById("soKetNoi").value * 1;
+  if (chonKH == "doanhNghiep" && soKetNoi <= 10) {
+    var tienCap = 15 + 75 + 50 * soKenh;
+  } else if (chonKH == "doanhNghiep" && soKetNoi > 10) {
+    var tienCap = 15 + 75 + soKetNoi * 5 + 50 * soKenh;
+  } else if (chonKH == "nhaDan") {
+    var tienCap = 4.5 + 20.5 + soKenh * 7.5;
+  }
+  document.querySelector("#hienThiTienCap").innerHTML =
+    " mã khách hàng : " + maKh + " tiền cáp : " + "$" + tienCap;
+}
+function doanhNghiep() {
+  var chonKH = document.getElementById("chonKhach").value;
+  if (chonKH == "doanhNghiep") {
+    console.log("chonKH");
+    document.getElementById("soKetNoi").style.display = `block`;
+  } else if (chonKH == "nhaDan") {
+    document.getElementById("soKetNoi").style.display = `none`;
+  }
+}

@@ -93,6 +93,40 @@
   </div>
 
 
+  <!-- bài tập 4  -->
+  <div class="container" style="margin-bottom: 100px;">
+    <h1>Bài tập 4: tính tiền cáp</h1>
+    <div class="mp3 ">
+      <label for="" class="form-label">Chọn loại khách hàng</label>
+      <select name="" id="chonKhach" onchange="doanhNghiep()">
+          <option value="nhaDan">Nhà dân</option>
+          <option value="doanhNghiep">Doanh nghiệp</option>
+      </select>
+  </div>
+  <br>
+  <div class="mb-3 ">
+      <label for="" class="form-label"> </label>
+      <input type="text" class="form-control " name="" id="soKetNoi" aria-describedby="emailHelpId"
+          placeholder="số kết nối">
+  </div>
+  <br>
+  <div class="mb-3">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control" name="" id="maKH" aria-describedby="emailHelpId"
+          placeholder="mã khách hàng">
+  </div>
+  <div class="mb-3">
+      <label for="" class="form-label"></label>
+      <input type="text" class="form-control" name="" id="soKenh" aria-describedby="emailHelpId"
+          placeholder="số kênh cao cấp">
+  </div>
+  <br>
+  <button class="btn btn-info" id="tinhTienCap" onclick="tinhTienCapQuang()">Tính tiền cáp</button>
+  <br>
+  <div  class="alert alert-dark mb-2 w-25" id="hienThiTienCap">
+  </div>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
